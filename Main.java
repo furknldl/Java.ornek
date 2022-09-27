@@ -1,42 +1,24 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args)
     {
-        Double mzk,fzk,mat,kmy,trk,trh,ort;
+        Double tutar,kdv1=0.18,kdv2=0.08;
 
         Scanner inp = new Scanner(System.in);
 
-        System.out.println("Fizik Notunuzu Giriniz: ");
+        System.out.print("Tutari Giriniz: ");
 
-        fzk = inp.nextDouble();
+        tutar = inp.nextDouble();
 
-        System.out.println("Muzik Notunuzu Giriniz: ");
+        boolean sonuc1 = (tutar<1000);
 
-        mzk = inp.nextDouble();
+        System.out.print( sonuc1 ? "KDV Tutari :" +(tutar*kdv1) :"KDV Tutari :"+ (tutar*kdv2));
 
-        System.out.println("Matematik Notunuzu Giriniz: ");
+        System.out.print("\nKDV'li Tutar : ");
 
-        mat = inp.nextDouble();
+        System.out.println(sonuc1 ? (tutar+(tutar*kdv1)) : (tutar+(kdv2*tutar)));
 
-        System.out.println("Kimya Notunuzu Giriniz: ");
-
-        kmy = inp.nextDouble();
-
-        System.out.println("Tarih Notunuzu Giriniz: ");
-
-        trh= inp.nextDouble();
-
-        System.out.println("Turkce Notunuzu Giriniz: ");
-
-       trk = inp.nextDouble();
-
-        ort = (fzk + mzk + mat + trh + kmy + trk)/6;
-
-        System.out.println("Ortalamanız : " + ort);
-
-        String str = (ort>=60) ? "gectiniz":"kaldiniz";
-
-        System.out.println("\nDersten "+str);
 
     }
 }
