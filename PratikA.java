@@ -32,7 +32,7 @@ public class PratikA {
             }
         }*/
 
-        int sayac=0,m;
+        int sayac=0,m,sum=0,sayilar=0,ort = 0;
         Scanner inp = new Scanner(System.in);
         System.out.println("bir sayı giriniz: ");
         m = inp.nextInt();
@@ -40,7 +40,10 @@ public class PratikA {
             sayac++;
             if (sayac % 3 == 0 && sayac % 4 == 0){
                 System.out.println(sayac);
+                sayilar++;
+                sum+=sayac;
+                ort=sum/sayilar; 
             }
-        }
+        }System.out.println("sayilarin ort ="+ort);
     }
 }
